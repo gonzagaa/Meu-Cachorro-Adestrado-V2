@@ -1,0 +1,148 @@
+#incluido {
+    overflow: hidden;
+    position: relative;
+}
+
+#incluido .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    padding-inline: 10%;
+
+    padding-top: 10%;
+}
+
+#incluido .cards .card {
+    background: #fff;
+    border-radius: 2rem;
+
+    padding: 3rem;
+
+    box-shadow:  16px 16px 32px #0d0d15,
+             -16px -16px 32px #11111d;
+}
+
+#incluido .cards .card h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#incluido .cards .card p {
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 300;
+}
+
+#incluido::before {
+      content: '';
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(#DE6D24, transparent 50%);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 3;
+      top: 30%;
+      transform: translateY(-50%);
+      right: -40rem;
+      opacity: .2;
+}
+
+#incluido img.incluido {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    width: 50%;
+}
+
+#incluido img.linha {
+    position: absolute;
+    width: 50%;
+    right: -5%;
+    top: 0;
+}
+
+#incluido img.completo {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    z-index: -1;
+    opacity: .6;
+}
+
+#incluido header {
+    display: none;
+}
+
+#incluido img.linha.dois {
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    section#incluido {
+        padding-top: 0;
+    }
+
+    section#incluido .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 0;
+    }
+
+    section#incluido img.completo {
+        width: 40%;
+    }
+
+    section#incluido img.incluido {
+        display: none;
+    }
+
+    section#incluido header {
+        display: inherit;
+        margin-bottom: 1rem;
+    }
+
+    section#incluido header h2 {
+        font-size: 10rem;
+        mask-image: linear-gradient(to bottom, #000, transparent);
+    }
+
+    section#incluido img.linha {
+        width: 35%;
+        left: initial;
+        right: 0;
+        top: 25%;
+        z-index: -1;
+        opacity: .5;
+    }
+
+    section#incluido img.linha.dois {
+        display: inherit;
+        transform: scaleX(-1);
+        right: initial;
+        left: 0;
+    }
+
+    section#incluido::before {
+        top: 50%;
+    }
+    
+    section#incluido::after {
+        content: '';
+        width: 700px;
+        height: 700px;
+        background: radial-gradient(#DE6D24, transparent 50%);
+        border-radius: 50%;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -40rem;
+        opacity: .2;
+    }
+}

@@ -1,0 +1,122 @@
+.mockups {
+    overflow: hidden;
+    position: relative;
+
+    background: #000;
+
+    padding-block: 1rem;
+}
+
+.mockups img.bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+
+    mask-image: linear-gradient(to bottom, #000 70%, transparent);
+}
+
+.mockups .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.mockups .content header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.mockups .content header p {
+    font-size: 1.5rem;
+    color: #e8e8e8;
+    margin-top: .5rem;
+}
+
+.mockups .content header p span {
+    font-weight: 700;
+}
+
+.mockups .content a button {
+    margin-top: 3rem;
+}
+
+.mockups .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mockups .image img {
+    width: 130%;
+}
+
+#mockupTres {
+    padding-bottom: 8rem;
+}
+
+@media (min-width: 1080px) {
+    section#mockupUm {
+        padding-top: 12%;
+    }
+
+    section#mockupTres {
+        padding-bottom: 18rem;
+    }
+
+    section.mockups {
+        padding-bottom: 8rem;
+        margin-top: 0;
+
+        padding-block: 8%;
+    }
+
+    section.mockups .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b";
+        gap: 12rem;
+    }
+
+    section.mockups .content header {
+        grid-area: a;
+        align-items: start;
+        text-align: left;
+
+        margin-top: 10%;
+    }
+
+    section.mockups .content header h2 {
+        margin-bottom: 2rem;
+        font-size: 5rem;
+    }
+
+    section.mockups .content header a button {
+        margin-top: 4rem;
+        margin-left: .8rem;
+    }
+
+    section.mockups .content .image img {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        width: 90%;
+        left: 45%;
+    }
+
+    section.mockups.contrario .content header {
+        grid-area: b;
+    }
+
+    section.mockups.contrario .content .image img {
+        left: initial;
+        right: 45%;
+    }
+}

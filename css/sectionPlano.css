@@ -1,0 +1,199 @@
+#plano {
+    overflow: hidden;
+    position: relative;
+}
+
+#plano::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: var(--gradient);
+    width: 100%;
+    height: 70%;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+#plano header h2 {
+    font-weight: 800;
+}
+
+#plano header p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#plano .card {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    position: relative;
+}
+
+#plano .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.229);
+    border-radius: 3rem;
+    z-index: -1;
+    top: 3%;
+    left: 3%;
+}
+
+#plano .card a button {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+#plano .card .boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 3rem;
+
+    position: relative;
+}
+
+#plano .card .box {
+    position: relative;
+}
+
+#plano .card .boxes::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    bottom: 0;
+    background: var(--primary-color);
+}
+
+#plano .card img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#plano .card .price h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+
+    margin-top: 1rem;
+}
+
+#plano .card .price h4 span {
+    text-decoration: line-through;
+}
+
+#plano .card .price h2 {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+#plano .card .price h5 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+#plano .card h3 {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#plano .card p {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+@media (min-width: 1080px) {
+    section#plano .content {
+        padding-inline: 20%;
+    }
+
+    section#plano .content a {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section#plano .content header h2 {
+        font-size: 3.5rem;
+    }
+
+    section#plano .content header p {
+        font-size: 1.6rem;
+    }
+
+    section#plano .content a button {
+        font-size: 1.8rem;
+        margin-bottom: -2rem;
+    }
+
+    section#plano .card {
+        padding: 6rem;
+    }
+
+    section#plano .card .boxes {
+        gap: 8rem;
+    }
+
+    section#plano .card .price h4 {
+        font-size: 1.6rem;
+    }
+
+    section#plano .card .price h2 {
+        font-size: 3.5rem;
+    }
+
+    section#plano .card .price h5 {
+        font-size: 1.8rem;
+    }
+
+    section#plano .card h3 {
+        font-size: 2rem;
+    }
+
+    section#plano .card p {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    section#plano::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-120px;                 /* sobe um pouco pra “nascer” de cima */
+  transform:translateX(-50%);
+  width: 120%;    /* bonito no desktop e responsivo */
+  height: 70%;
+  border-radius: 0 0 500px 500px;       /* forma oval suave */
+      background:
+    radial-gradient(70% 90% at 50% 20%,
+      rgba(255,255,255,.28) 0%,
+      rgba(255,255,255,0) 60%),
+    linear-gradient(180deg,
+      #e86a00 0%,
+      #ff8a1f 55%,
+      #ff9b4a 100%);
+  filter: blur(0px);
+  z-index:-1;
+  opacity: 0.9;
+}
+
+section#plano .card::before {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 104%;
+    border-radius: 3rem;
+}
+}

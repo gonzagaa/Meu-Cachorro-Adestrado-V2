@@ -1,0 +1,260 @@
+#home {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 25;
+
+  transition: all 200ms ease-in-out;
+  margin-bottom: 0;
+
+  height: auto;
+  padding-bottom: 10%;
+}
+
+#home .wrapper {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+
+#home .content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  padding-top: 100%;
+}
+
+#home .image img {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  border: 2px solid #ffffff63;
+}
+
+#home .text {
+  position: relative;
+  z-index: 4;
+}
+
+#home img.logo {
+  width: 25rem;
+  height: auto; 
+}
+
+#home img.logo.desktop {
+  display: none;
+}
+
+#home h1 {
+  color: var(--color-text);
+  font-weight: 700;
+  line-height: 1;
+  font-size: 2.7rem;
+
+  margin-top: 2rem;
+  
+  letter-spacing: 1px;
+}
+
+#home h1 span {
+  background: var(--primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 18px #de6e244c;
+}
+
+#home .content h1 img.fucinho {
+    width: 6rem;
+    margin-left: .8rem;
+}
+
+#home p {
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: #ffffff;
+}
+
+#home p span {
+  color: #fff;
+  font-weight: 600;
+}
+
+#home img.bg {
+  height: auto; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+#home img.bg.desktop {
+  display: none;
+}
+
+#home a button {
+  margin-top: 2rem;
+}
+
+.custom-shape-divider-bottom-1736960517 {
+  display: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10;
+}
+
+.custom-shape-divider-bottom-1736960517 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 30px;
+}
+
+.custom-shape-divider-bottom-1736960517 .shape-fill {
+  fill: var(--bg);
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1080px) {
+  header#home {
+    justify-content: center;
+    position: relative;
+
+    height: 95vh;
+    z-index: 1;
+
+    border-radius: 0;
+    box-shadow: initial;
+
+    padding-bottom: initial;
+  }
+
+  header#home img.bg.desktop {
+    display: inherit;
+  }
+
+  header#home img.bg.mobile {
+    display: none;
+  }
+
+  header#home .swiper {
+    margin-bottom: 0;
+  }
+
+  header#home img.logo {
+    height: auto; 
+    width: 60%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  header#home img.logo.desktop {
+    display: inherit;
+  }
+
+  header#home img.logo.mobile {
+    display: none;
+  }
+
+  header#home img.bg {
+    height: auto; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 3;
+  }
+
+  header#home .content {
+    text-align: center;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b";
+    gap: 8rem;
+    padding-top: 0%;
+  }
+
+  header#home .content .text {
+    grid-area: a;
+    margin-bottom: initial;
+
+    text-align: left;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  header#home span.span {
+    font-size: 1.8rem;
+    letter-spacing: 20px;
+  }
+
+  header#home .content h1 {
+    font-size: 4rem;
+    line-height: 1;
+
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+  }
+
+  header#home .content h1 img.fucinho {
+    width: 8rem;
+    margin-left: .8rem;
+  }
+
+  header#home .content h1 span {
+    text-shadow: 0 0 18px #de6e2492;
+  }
+
+  header#home .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  header#home a button { 
+    margin-top: 4rem;
+  }
+
+  header#home .topics {
+    justify-content: start;
+  }
+
+  header#home .topics .topic p {
+      font-size: 1.1rem;
+      padding: .8rem;
+      font-weight: 700;
+  }
+}
+
+@media (min-width: 1700px) {
+  header#home .content h1 {
+    font-size: 5rem;
+    padding-bottom: .5rem;
+    margin-bottom: 0;
+  }
+
+  header#home .content p {
+    font-size: 1.8rem;
+  }
+
+  header#home .content h1 img.fucinho {
+    width: 10.5rem;
+  }
+}

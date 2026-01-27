@@ -1,0 +1,109 @@
+#video {
+    overflow: hidden;
+    position: relative;
+
+    padding-bottom: 8rem;
+}
+
+#video header {
+    position: relative;
+    z-index: 2;
+}
+
+#video header h2 {
+    font-size: 2.3rem;
+    width: 90%;
+}
+
+#video img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1;
+}
+
+#video .image img {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+#video a button {
+    margin-top: 3rem;
+}
+
+#video img.patinha {
+    position: absolute;
+    z-index: 5;
+}
+
+#video img.patinha.grande {
+    bottom: 1%;
+    left: -10%;
+    width: 9rem;
+}
+
+#video img.patinha.pequena {
+    bottom: 0%;
+    width: 6rem;
+    left: 15%;
+}
+
+#video::before {
+      content: '';
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(#DE6D24, transparent 50%);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -40rem;
+      opacity: .2;
+}
+
+@media (min-width: 1080px) {
+    section#video {
+        padding-block: 8rem;
+    }
+    
+    section#video .image img {
+        padding-inline: 15%;
+    }
+
+    section#video .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#video header h2 {
+        font-size: 4rem;
+        width: 60%;
+    }
+
+    section#video img.patinha.grande {
+        bottom: 1%;
+        left: 15%;
+        width: 20rem;
+    }
+
+    section#video img.patinha.pequena {
+        bottom: 0%;
+        width: 10rem;
+        left: 25%;
+    }
+
+    section#video::before {
+        width: 1200px;
+        height: 1200px;
+        right: -35%;
+    }
+}

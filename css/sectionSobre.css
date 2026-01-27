@@ -1,0 +1,91 @@
+#sobre {
+    position: relative;
+    overflow: hidden;
+}
+
+#sobre .card {
+    border-radius: 2rem;
+    padding: 2rem;
+    background: #fff;
+
+    position: relative;
+}
+
+#sobre .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.229);
+    border-radius: 3rem;
+    z-index: -1;
+    top: 3%;
+    left: 3%;
+}
+
+#sobre .card img {
+    width: 100%;
+}
+
+#sobre .card p {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+
+    text-align: left;
+}
+
+#sobre .card p span {
+    font-weight: 800;
+}
+
+#sobre img.linha {
+    position: absolute;
+    width: 50%;
+    right: -5%;
+    top: 0;
+    display: none;
+}
+
+
+#sobre img.linha.dois {
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    section#sobre .content {
+        padding-inline: 15%;
+    }
+
+    section#sobre .content .card {
+        padding: 6rem;
+    }
+
+    section#sobre .content .card p {
+        font-size: 1.6rem;
+        margin-top: 5rem;
+    }
+
+    section#sobre .card::before {
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 103%;
+    }
+
+    section#sobre img.linha {
+        width: 35%;
+        left: initial;
+        right: 0;
+        top: 30%;
+        z-index: -1;
+        opacity: .5;
+        display: inherit;
+    }
+
+    section#sobre img.linha.dois {
+        display: inherit;
+        transform: scaleX(-1);
+        right: initial;
+        left: 0;
+    }
+
+}

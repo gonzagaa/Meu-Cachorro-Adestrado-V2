@@ -1,0 +1,208 @@
+#faq {
+    overflow: hidden;
+    position: relative;
+    background: #f7f4f2;
+
+    padding-bottom: 8rem;
+}
+
+#faq .content {
+    position: relative;
+    z-index: 2;
+}
+
+#faq img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1;
+}
+
+#faq p.box {
+    background: #DED3CA;
+    background: radial-gradient(at center, #DED3CA, #E6DCD4);
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+    font-size: 1.4rem;
+}
+
+#faq .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3rem;
+}
+
+#faq .image img {
+    width: 80%;
+}
+
+#faq header {
+    margin-top: 2rem;
+}
+
+#faq a button {
+    margin-top: 2rem;
+}
+
+#faq .faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+#faq details {
+    width: 100%;
+    user-select: none;
+}
+
+#faq summary {
+    cursor: pointer;
+    color: #fffffffe;
+    font-weight: 400;
+    font-size: 1.2rem;
+
+    background: linear-gradient(45deg, #000, #0a0a0a);
+
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 1rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+
+#faq details[open] summary {
+    border-radius: 1rem 1rem 0 0;
+
+    border: 2px solid #ababab93;
+    border-bottom: 0;
+}
+
+#faq details[open] summary::before {
+    display: none;
+}
+
+#faq details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0%    {opacity: 0; margin-top: -10px}
+    100%  {opacity: 1; margin-top: 0px}
+  }
+
+#faq summary ion-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+
+    font-size: 3rem;
+    transition: all .5s ease-in-out;
+    color: var(--primary-color);
+    transform: rotate(-45deg);
+    position: relative;
+    line-height: 0;
+}
+
+
+#faq details[open] summary ion-icon {
+    transform: rotate(0);
+}
+
+details>summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+#faq details p {
+    background: linear-gradient(45deg, #0a0a0a, #000000);
+
+    padding: 3rem;
+    padding-top: 2rem;
+    padding-right: 10%;
+    text-align: left;
+    
+    border: 2px solid #ababab93;
+
+    border-top: 0;
+
+    border-radius: 0 0 1rem 1rem;
+
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+@media (min-width: 1080px) {
+    section#faq {
+    }
+
+    section#faq .content {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+    }
+
+    section#faq .image {
+        margin-bottom: 0;
+    }
+
+    section#faq header {
+        text-align: left;
+        align-items: start;
+        margin-bottom: 0;
+    }
+
+    section#faq header h2.dois {
+        font-size: 2.6rem;
+    }
+
+    section#faq .topics {
+        margin-top: 1rem;
+    }
+
+    section#faq .topics .topic {
+        padding: 2.5rem;
+        width: 100%;
+    }
+
+    section#faq .topics .topic p {
+        font-size: 1.3rem;
+    }
+
+    section#faq header {
+        margin-top: 0;
+    }
+
+    section#faq summary {
+        font-size: 1.3rem;
+        padding: 2.3rem;
+    }
+
+    section#faq h3 {
+        margin-top: 8rem;
+    }
+
+}

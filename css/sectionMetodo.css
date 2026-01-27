@@ -1,0 +1,145 @@
+#metodo {
+    overflow: hidden;
+    position: relative;
+}
+
+#metodo img.logo {
+    width: 25rem;
+}
+
+#metodo img.tres {
+    width: 15rem;
+    margin-top: 5rem;
+}
+
+#metodo img.patinha {
+    position: absolute;
+    z-index: 5;
+    top: 10%;
+    right: -15%;
+    width: 13rem;
+}
+
+#metodo .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    justify-content: center;
+    gap: 2rem;
+
+    margin-top: 5rem;
+}
+
+#metodo .cards .card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#metodo .cards .card::before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 40%;
+    height: 2px;
+    background: var(--primary-color);
+    z-index: -1;
+}
+
+#metodo .cards .card img {
+    width: 9rem;
+}
+
+#metodo .cards .card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#metodo .cards .card p {
+    font-size: 1.1rem;
+    color: #ffffff92;
+    font-weight: 300;
+
+    margin-top: 1.5rem;
+}
+
+#metodo header {
+    margin-top: 5rem;
+}
+
+#metodo header h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    width: 70%;
+}
+
+#metodo img.linha {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 30%;
+    width: 32%;
+}
+
+#metodo img.linha.dois {
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    section#metodo .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        padding-inline: 13%;
+    }
+
+    section#metodo .content .box {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+
+    section#metodo img.tres {
+        width: 80%;
+        margin-top: 0;
+    }
+
+    section#metodo .cards {
+        margin-top: 0;
+    }
+
+    section#metodo img.logo {
+        display: none;
+    }
+
+    section#metodo .cards .card p {
+        font-size: 1.5rem;
+    }
+
+    section#metodo img.linha {
+        mask-image: linear-gradient(to bottom, #fff, transparent 30%);
+    }
+
+    section#metodo img.linha.dois {
+        display: inherit;
+        transform: scaleX(-1);
+        left: initial;
+        right: 0;
+    }
+
+    section#metodo header h2 {
+        margin-top: 5rem;
+        font-size: 1.6rem;
+        width: 100%;
+    }
+}
