@@ -38,18 +38,45 @@
     font-weight: 800;
 }
 
-#sobre img.linha {
-    position: absolute;
-    width: 50%;
-    right: -5%;
-    top: 0;
-    display: none;
+/* Base (mobile: escondido) */
+#sobre svg.linha{
+  position: absolute;
+  width: 50%;
+  right: -5%;
+  top: 0;
+  display: none;
 }
 
-
-#sobre img.linha.dois {
-    display: none;
+/* a segunda linha (espelhada) */
+#sobre svg.linha.dois{
+  display: none;
 }
+
+/* garante que o svg respeite o tamanho */
+#sobre svg.linha{
+  height: auto;
+}
+
+/* estilo do path */
+#sobre svg.linha .linha-path{
+  fill: none;
+  stroke: #DE6D24;
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* visual: dashed */
+#sobre svg.linha .linha-path{
+  fill: none;
+  stroke: #DE6D24;
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 
 @media (min-width: 1080px) {
     section#sobre .content {
@@ -71,21 +98,21 @@
         width: 103%;
     }
 
-    section#sobre img.linha {
-        width: 35%;
-        left: initial;
-        right: 0;
-        top: 30%;
-        z-index: -1;
-        opacity: .5;
-        display: inherit;
-    }
+     section#sobre svg.linha {
+    width: 35%;
+    left: initial;
+    right: 0;
+    top: 30%;
+    z-index: -1;
+    display: block;
+  }
 
-    section#sobre img.linha.dois {
-        display: inherit;
-        transform: scaleX(-1);
-        right: initial;
-        left: 0;
-    }
+  section#sobre svg.linha.dois {
+    display: block;
+    transform: scaleX(-1);
+    transform-origin: center;
+    right: initial;
+    left: 0;
+  }
 
 }

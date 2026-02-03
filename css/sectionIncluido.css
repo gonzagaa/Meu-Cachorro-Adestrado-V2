@@ -45,7 +45,7 @@
       border-radius: 50%;
       position: absolute;
       z-index: 3;
-      top: 30%;
+      top: 45%;
       transform: translateY(-50%);
       right: -40rem;
       opacity: .2;
@@ -58,12 +58,7 @@
     width: 50%;
 }
 
-#incluido img.linha {
-    position: absolute;
-    width: 50%;
-    right: -5%;
-    top: 0;
-}
+
 
 #incluido img.completo {
     position: absolute;
@@ -79,8 +74,34 @@
     display: none;
 }
 
-#incluido img.linha.dois {
-    display: none;
+#incluido svg.linha{
+  position: absolute;
+  width: 50%;
+  right: -5%;
+  top: 0;
+}
+
+#incluido svg.linha.dois{
+  display: none;
+}
+
+/* estilo do path */
+#incluido svg.linha .linha-path{
+  fill: none;
+  stroke: #DE6D24;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* visual: dashed */
+#incluido svg.linha .linha-path{
+  fill: none;
+  stroke: #DE6D24;
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 @media (min-width: 1080px) {
@@ -92,6 +113,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         padding-top: 0;
+
+        padding-bottom: 3%;
     }
 
     section#incluido img.completo {
@@ -112,21 +135,23 @@
         mask-image: linear-gradient(to bottom, #000, transparent);
     }
 
-    section#incluido img.linha {
-        width: 35%;
-        left: initial;
-        right: 0;
-        top: 25%;
-        z-index: -1;
-        opacity: .5;
-    }
+    section#incluido svg.linha{
+    width: 35%;
+    left: initial;
+    right: -5%;
+    top: 25%;
+    z-index: -1;
 
-    section#incluido img.linha.dois {
-        display: inherit;
-        transform: scaleX(-1);
-        right: initial;
-        left: 0;
-    }
+    mask-image: linear-gradient(to bottom, #000 80%, transparent);
+  }
+
+  section#incluido svg.linha.dois{
+    display: block;
+    transform: scaleX(-1);
+    transform-origin: center;
+    right: initial;
+    left: -5%;
+  }
 
     section#incluido::before {
         top: 50%;

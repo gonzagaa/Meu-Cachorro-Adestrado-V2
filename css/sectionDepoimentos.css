@@ -1,0 +1,94 @@
+#depoimentos {
+    overflow: hidden;
+    position: relative;
+}
+
+#depoimentos img {
+    width: 100%;
+}
+
+#depoimentos .cards {
+    padding-bottom: 4rem;
+}
+
+#depoimentos .swiper-pagination-bullet {
+    background-color: #ffffff1a; 
+    opacity: 1; 
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+  
+#depoimentos .swiper-pagination-bullet-active {
+    background-color: var(--primary-color); 
+}
+
+#depoimentos .swiper-button-next {
+    top: 47%;
+    color: #ffffff; 
+    transform: scale(.5);
+}
+  
+#depoimentos .swiper-button-prev {
+    top: 47%;
+    color: #ffffff; 
+    transform: scale(.5);
+}
+
+#depoimentos .mySwiper4 {
+    overflow: inherit !important;
+}
+
+/* deixa os slides “respirando” e alinhados */
+#depoimentos .mySwiper4 .swiper-wrapper {
+  align-items: center;
+}
+
+/* comportamento padrão: menores e mais “apagados” */
+#depoimentos .mySwiper4 .swiper-slide {
+  transform: scale(.86);
+  opacity: .55;
+  filter: saturate(.9) blur(.2px);
+  transition: transform .55s ease, opacity .55s ease, filter .55s ease;
+}
+
+/* slide do meio (ativo): tamanho original e destaque */
+#depoimentos .mySwiper4 .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  filter: none;
+  z-index: 2;
+}
+
+/* opcional: dá um “meio termo” pros slides colados no centro */
+#depoimentos .mySwiper4 .swiper-slide-prev,
+#depoimentos .mySwiper4 .swiper-slide-next {
+  transform: scale(.92);
+  opacity: .8;
+  filter: saturate(.95);
+  z-index: 1;
+}
+
+/* garante que a imagem acompanhe bem o scale */
+#depoimentos .mySwiper4 .swiper-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 12px; /* opcional */
+}
+
+
+@media (min-width: 1080px) {
+    section#depoimentos header h2 {
+        font-size: 4rem;
+    }
+
+    section#depoimentos .mySwiper4 {
+        overflow: hidden !important;
+
+        padding-inline: 2%;
+    }
+
+    section#depoimentos .cards {
+        padding-bottom: 6rem;
+    }
+}

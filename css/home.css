@@ -23,7 +23,7 @@
   justify-content: center;
   height: 100%;
 
-  padding-top: 100%;
+  padding-top: 110%;
 }
 
 #home .image img {
@@ -50,12 +50,14 @@
 #home h1 {
   color: var(--color-text);
   font-weight: 700;
-  line-height: 1;
-  font-size: 2.7rem;
+  line-height: .9;
+  font-size: 3.5rem;
 
   margin-top: 2rem;
   
   letter-spacing: 1px;
+
+  text-shadow: 0 0 18px #ffffff4c;
 }
 
 #home h1 span {
@@ -130,7 +132,7 @@
     justify-content: center;
     position: relative;
 
-    height: 95vh;
+    height: 100vh;
     z-index: 1;
 
     border-radius: 0;
@@ -141,6 +143,8 @@
 
   header#home img.bg.desktop {
     display: inherit;
+
+    mask-image: linear-gradient(to bottom, #000 70%, transparent);
   }
 
   header#home img.bg.mobile {
@@ -198,6 +202,8 @@
 
     position: relative;
     z-index: 2;
+
+    margin-top: -10%;
   }
 
   header#home span.span {

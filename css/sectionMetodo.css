@@ -80,17 +80,30 @@
     width: 70%;
 }
 
-#metodo img.linha {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 30%;
-    width: 32%;
+#metodo svg.linha{
+  position: absolute;
+  z-index: -1;
+  left: -1.5%;
+  top: 32%;
+  width: 20%;
+  height: auto;
+  pointer-events: none;
 }
 
-#metodo img.linha.dois {
-    display: none;
+#metodo svg.linha.dois{
+  display: none;
 }
+
+/* dashed (visual) */
+#metodo svg.linha .linha-path{
+  fill: none;
+  stroke: #DE6D24;
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 
 @media (min-width: 1080px) {
     section#metodo .content {
@@ -109,8 +122,15 @@
         align-items: center;
     }
 
+    section#metodo .head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
     section#metodo img.tres {
-        width: 80%;
+        width: 60%;
         margin-top: 0;
     }
 
@@ -119,27 +139,33 @@
     }
 
     section#metodo img.logo {
-        display: none;
+        width: 20rem;
+        object-fit: cover;
     }
 
     section#metodo .cards .card p {
         font-size: 1.5rem;
     }
 
-    section#metodo img.linha {
-        mask-image: linear-gradient(to bottom, #fff, transparent 30%);
-    }
+    /* seu fade por mask-image (opcional) */
+  section#metodo svg.linha{
+    width: 20%;
+    -webkit-mask-image: linear-gradient(to bottom, #fff, transparent 30%);
+            mask-image: linear-gradient(to bottom, #fff, transparent 30%);
+  }
 
-    section#metodo img.linha.dois {
-        display: inherit;
-        transform: scaleX(-1);
-        left: initial;
-        right: 0;
-    }
+  section#metodo svg.linha.dois{
+    display: block;
+    transform: scaleX(-1);
+    transform-origin: center;
+    left: initial;
+    right: 0;
+  }
 
     section#metodo header h2 {
         margin-top: 5rem;
-        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
         width: 100%;
     }
 }

@@ -56,15 +56,15 @@
 
 #video::before {
       content: '';
-      width: 700px;
-      height: 700px;
+      width: 500px;
+      height: 500px;
       background: radial-gradient(#DE6D24, transparent 50%);
       border-radius: 50%;
       position: absolute;
       z-index: 3;
       top: 50%;
       transform: translateY(-50%);
-      right: -40rem;
+      right: -20rem;
       opacity: .2;
 }
 

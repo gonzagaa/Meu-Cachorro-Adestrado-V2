@@ -1,7 +1,7 @@
 #faq {
     overflow: hidden;
     position: relative;
-    background: #f7f4f2;
+    
 
     padding-bottom: 8rem;
 }
@@ -42,10 +42,11 @@
 
 #faq .image img {
     width: 80%;
+    margin-top: 5rem;
 }
 
 #faq header {
-    margin-top: 2rem;
+    
 }
 
 #faq a button {
@@ -67,11 +68,11 @@
 
 #faq summary {
     cursor: pointer;
-    color: #fffffffe;
+    color: #000000fe;
     font-weight: 400;
     font-size: 1.2rem;
 
-    background: linear-gradient(45deg, #000, #0a0a0a);
+    background: linear-gradient(45deg, #ffffff, #ffffff);
 
     display: flex;
     text-align: left;
@@ -137,7 +138,7 @@ summary::-webkit-details-marker {
 }
 
 #faq details p {
-    background: linear-gradient(45deg, #0a0a0a, #000000);
+    background: linear-gradient(45deg, #e4e4e4, #e4e4e4);
 
     padding: 3rem;
     padding-top: 2rem;
@@ -151,7 +152,7 @@ summary::-webkit-details-marker {
     border-radius: 0 0 1rem 1rem;
 
     font-size: 1.4rem;
-    color: #fff;
+    color: #000000;
     font-weight: 500;
 }
 
@@ -163,16 +164,20 @@ summary::-webkit-details-marker {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         align-items: center;
+
+        grid-template-areas: "a b";
+        gap: 8rem;
     }
 
     section#faq .image {
         margin-bottom: 0;
+        grid-area: a;
     }
 
     section#faq header {
         text-align: left;
         align-items: start;
-        margin-bottom: 0;
+        margin-bottom: 3rem;
     }
 
     section#faq header h2.dois {
