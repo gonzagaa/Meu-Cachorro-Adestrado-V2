@@ -27,10 +27,11 @@
 #plano .card {
     background: #fff;
     border-radius: 2rem;
-    padding: 2rem;
-    padding-block: 4rem;
+    padding: 3rem;
 
     position: relative;
+
+    overflow: hidden;
 }
 
 #plano .card::before {
@@ -47,12 +48,12 @@
 
 #plano .card a button {
     font-size: 1.2rem;
-    margin-top: 3rem;
+    margin-top: -1rem;
 }
 
 #plano .card .boxes {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: start;
     gap: 3rem;
 
@@ -63,15 +64,19 @@
     position: relative;
 }
 
+#plano .card .box p {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
 #plano .card .boxes::before {
     content: '';
     position: absolute;
-    width: 1px;
-    height: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 0;
-    bottom: 0;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 65%;
     background: var(--primary-color);
 }
 
@@ -80,9 +85,14 @@
     border-radius: 1rem;
 }
 
+#plano .card .price {
+    display: flex;
+    flex-direction: column;
+}
+
 #plano .card .price h4 {
-    font-size: 1.3rem;
-    font-weight: 800;
+    font-size: 1.8rem;
+    font-weight: 500;
 
     margin-top: 1rem;
 }
@@ -92,19 +102,40 @@
 }
 
 #plano .card .price h2 {
-    font-size: 2.3rem;
+    font-size: 4rem;
     color: var(--primary-color);
 }
 
 #plano .card .price h5 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
+
+    color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    #ffaf3f,
+    var(--primary-color)
+  );
+  background-size: 220% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* pulse no texto (não muda layout) */
+  display: inline-block;
+  transform-origin: center;
+
+  /* animações juntas */
+  animation: priceFlow 2.4s ease-in-out infinite, pricePulse 3.9s ease-in-out infinite;
+
+  will-change: transform, background-position, filter;
 }
 
 #plano .card h3 {
     text-transform: uppercase;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: var(--primary-color);
     letter-spacing: 1px;
     font-weight: 600;
@@ -116,7 +147,6 @@
 }
 
 #plano .card .price h2{
-  font-size: 2.3rem;
 
   /* gradiente animado dentro do texto */
   color: transparent;
@@ -176,12 +206,23 @@
   to{   transform: rotate(-50deg) translateX(-50%); } /* ajuste -30%…-80% */
 }
 
+#plano a.desktop {
+    display: none;
+}
 
 @media (min-width: 1080px) {
     section#plano img.faixa {
-      width: 200%;
+      width: 300%;
 
       transform-origin: 5% 50%;
+    }
+
+    section#plano a.desktop {
+        display: flex;
+    }
+
+    section#plano .content a.mobile {
+        display: none;
     }
 
     section#plano .content {
@@ -206,6 +247,7 @@
     section#plano .content a button {
         font-size: 1.8rem;
         margin-bottom: -2rem;
+        margin-top: 3rem;
     }
 
     section#plano .card {
@@ -214,18 +256,22 @@
 
     section#plano .card .boxes {
         gap: 8rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     section#plano .card .price h4 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     section#plano .card .price h2 {
-        font-size: 3.5rem;
+        font-size: 4rem;
+        width: 100%;
     }
 
     section#plano .card .price h5 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     section#plano .card h3 {
@@ -238,31 +284,44 @@
     }
 
     section#plano::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-120px;                 /* sobe um pouco pra “nascer” de cima */
-  transform:translateX(-50%);
-  width: 120%;    /* bonito no desktop e responsivo */
-  height: 70%;
-  border-radius: 0 0 500px 500px;       /* forma oval suave */
-      background:
-    radial-gradient(70% 90% at 50% 20%,
-      rgba(255,255,255,.28) 0%,
-      rgba(255,255,255,0) 60%),
-    linear-gradient(180deg,
-      #e86a00 0%,
-      #ff8a1f 55%,
-      #ff9b4a 100%);
-  filter: blur(0px);
-  z-index:-1;
-  opacity: 0.9;
+        content:"";
+        position:absolute;
+        left:50%;
+        top:-120px;                 /* sobe um pouco pra “nascer” de cima */
+        transform:translateX(-50%);
+        width: 120%;    /* bonito no desktop e responsivo */
+        height: 70%;
+        border-radius: 0 0 500px 500px;       /* forma oval suave */
+            background:
+            radial-gradient(70% 90% at 50% 20%,
+            rgba(255,255,255,.28) 0%,
+            rgba(255,255,255,0) 60%),
+            linear-gradient(180deg,
+            #e86a00 0%,
+            #ff8a1f 55%,
+            #ff9b4a 100%);
+        filter: blur(0px);
+        z-index:-1;
+        opacity: 0.9;
+    }
+
+        section#plano .card::before {
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 104%;
+            border-radius: 3rem;
+    }
+
+    section#plano .card .boxes::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    background: var(--primary-color);
 }
 
-section#plano .card::before {
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 104%;
-    border-radius: 3rem;
-}
 }
