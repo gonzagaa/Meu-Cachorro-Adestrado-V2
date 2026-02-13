@@ -27,10 +27,16 @@
     opacity: 1;
 }
 
-#video .image img {
+#video .image {
     width: 100%;
-    position: relative;
-    z-index: 10;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+#video .image iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #video a button {
@@ -71,10 +77,15 @@
 @media (min-width: 1080px) {
     section#video {
         padding-block: 8rem;
+        padding-top: 2rem;
     }
-    
-    section#video .image img {
-        padding-inline: 15%;
+
+    section#video .content .image {
+        width: 70%;
+        aspect-ratio: 16/9;
+    }
+
+    section#video .image iframe {
     }
 
     section#video .content {

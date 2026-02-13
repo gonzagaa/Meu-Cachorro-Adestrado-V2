@@ -116,21 +116,14 @@
         padding-inline: 13%;
     }
 
-    section#metodo .content .box {
+    section#metodo .content .box-two {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.5fr;
         align-items: center;
-    }
-
-    section#metodo .head {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
     }
 
     section#metodo img.tres {
-        width: 60%;
+        width: 80%;
         margin-top: 0;
     }
 
@@ -139,8 +132,10 @@
     }
 
     section#metodo img.logo {
-        width: 20rem;
+        width: 25rem;
         object-fit: cover;
+
+        margin-bottom: 6rem;
     }
 
     section#metodo .cards .card p {
@@ -165,7 +160,7 @@
     section#metodo header h2 {
         margin-top: 5rem;
         margin-bottom: 2rem;
-        font-size: 1.8rem;
+        font-size: 2rem;
         width: 100%;
     }
 }

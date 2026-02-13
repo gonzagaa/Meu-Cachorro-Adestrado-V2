@@ -155,8 +155,35 @@
   #plano .card .price h2{ animation: none !important; }
 }
 
+#plano img.faixa {
+  position:absolute;
+  width: 500%;
+  left:0; top:0;
+  z-index:10;
+  pointer-events:none;
+  will-change:transform;
+  transform-origin: 4% 50%;
+  animation:faixa-diagonal-home 20s linear infinite alternate-reverse;
+}
+
+#plano img.faixa.right {
+    left: initial;
+    right: 0;
+}
+
+@keyframes faixa-diagonal-home{
+  from{ transform: rotate(-50deg) translateX(-5%); }
+  to{   transform: rotate(-50deg) translateX(-50%); } /* ajuste -30%…-80% */
+}
+
 
 @media (min-width: 1080px) {
+    section#plano img.faixa {
+      width: 200%;
+
+      transform-origin: 5% 50%;
+    }
+
     section#plano .content {
         padding-inline: 20%;
     }
