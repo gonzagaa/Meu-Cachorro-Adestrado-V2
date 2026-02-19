@@ -261,12 +261,16 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    section#plano .card .boxes p {
+        font-size: 1.8rem;
+    }
+
     section#plano .card .price h4 {
         font-size: 2rem;
     }
 
     section#plano .card .price h2 {
-        font-size: 4rem;
+        font-size: 5rem;
         width: 100%;
     }
 

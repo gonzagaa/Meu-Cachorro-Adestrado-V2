@@ -9,11 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!-- Primary Meta Tags -->
-    <title>Meu Cachorro Adestrado</title>
-
-    <meta name="Author" content="Gustavo Gonzaga">
-    <meta name="robots" content="index, follow" />
 
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
 
@@ -34,17 +29,6 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://api.meucachorroadestrado.com.br/bddryuuzbhz.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','alxf=EwxfPSE4VCU4LDE4QyU3VAxVUFREUx0cRwUHDxYUGhoVGhAVFBEcAQ4aAx4aWxodF0YACA%3D%3D');</script>
     <!-- End Google Tag Manager -->
 
-    <link rel="preload" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/css/styles.css" as="style">
-    <link rel="prerender" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/?v=bf20f417-7b42-4af7-b5c0-4f23971b0618">
-    <link rel="preload" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/js/hls.js" as="script">
-    <link rel="preload" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/js/plyr.polyfilled.min.js" as="script">
-    <link rel="preload" href="https://config.tv.pandavideo.com.br/vz-fa2c182e-ab9/bf20f417-7b42-4af7-b5c0-4f23971b0618.json" as="fetch">
-    <link rel="preload" href="https://config.tv.pandavideo.com.br/vz-fa2c182e-ab9/config.json" as="fetch">
-    <link rel="preload" href="https://b-vz-fa2c182e-ab9.tv.pandavideo.com.br/bf20f417-7b42-4af7-b5c0-4f23971b0618/playlist.m3u8" as="fetch">
-    <link rel="dns-prefetch" href="https://b-vz-fa2c182e-ab9.tv.pandavideo.com.br">
-    <link rel="dns-prefetch" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br">
-    <link rel="dns-prefetch" href="https://vz-fa2c182e-ab9.b-cdn.net">
-
     <!-- Primary Meta Tags -->
     <title>Meu Cachorro Adestrado - Eduque seu cachorro em casa de forma prática</title>
     <meta name="title" content="Meu Cachorro Adestrado - Eduque seu cachorro em casa de forma prática" />
@@ -56,14 +40,14 @@
     <meta property="og:url" content="https://meucachorroadestrado.com.br/" />
     <meta property="og:title" content="Meu Cachorro Adestrado - Eduque seu cachorro em casa de forma prática" />
     <meta property="og:description" content="Usando apenas 20 minutos do seu dia, eduque seu cão através de um método prático de 3 pilares, aplicado por milhares de alunos" />
-    <meta property="og:image" content="meucachorroadestrado.com.br/assets/banner.avif" />
+    <meta property="og:image" content="https://meucachorroadestrado.com.br/assets/banner.avif" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://meucachorroadestrado.com.br/" />
     <meta property="twitter:title" content="Meu Cachorro Adestrado - Eduque seu cachorro em casa de forma prática" />
     <meta property="twitter:description" content="Usando apenas 20 minutos do seu dia, eduque seu cão através de um método prático de 3 pilares, aplicado por milhares de alunos" />
-    <meta property="twitter:image" content="meucachorroadestrado.com.br/assets/banner.avif" />
+    <meta property="twitter:image" content="https://meucachorroadestrado.com.br/assets/banner.avif" />
 
     <!-- Autor e Indexação -->
     <meta name="author" content="Gustavo Gonzaga" />
@@ -72,9 +56,19 @@
 </head>
 <body id="body" class="smooth-scroll-wrapper">
     <header class="header" id="home">
-        <img class="bg mobile" data-aos="fade-bottom" src="./assets/BG DEFINITIVO MOBILE.avif" alt="">
-        <img class="bg desktop" data-aos="fade-left" src="./assets/BG DEFINITIVO DESKTOP.avif" alt="">
-        <img class="faixa" src="./assets/FAIXA 40 OFF.avif" alt="">
+        <picture>
+  <source media="(min-width: 1080px)" srcset="./assets/bg-definitivo-desktop.avif">
+  <img
+    class="bg"
+    src="./assets/bg-definitivo-mobile.avif"
+    alt=""
+    fetchpriority="high"
+    decoding="async"
+    width="1080" height="1920"
+  >
+</picture>
+
+        <img loading="lazy" decoding="async" class="faixa" src="./assets/FAIXA 40 OFF.avif" alt="">
 
         <div class="wrapper">
             <div class="content">
@@ -99,12 +93,13 @@
                 </header>
 
                 <div data-aos="flip-up" class="image">
-                  <iframe id="panda-bf20f417-7b42-4af7-b5c0-4f23971b0618" src="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/?v=bf20f417-7b42-4af7-b5c0-4f23971b0618&iosFakeFullscreen=true" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="720" height="360" fetchpriority="high"></iframe><script>if(!document.querySelector('script[src="https://player.pandavideo.com.br/api.v2.js"]')){let s=document.createElement('script');s.src='https://player.pandavideo.com.br/api.v2.js'; s.async=true; document.head.appendChild(s);} window.pandascripttag = window.pandascripttag || [];window.pandascripttag.push(function (){const panda_id_player = 'panda-bf20f417-7b42-4af7-b5c0-4f23971b0618';const p=new PandaPlayer(panda_id_player,{onReady(){p.loadWindowScreen({panda_id_player});p.pipScrollFollow({panda_id_player});}});})</script>
+                  <iframe loading="lazy"
+  fetchpriority="low" id="panda-bf20f417-7b42-4af7-b5c0-4f23971b0618" src="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/?v=bf20f417-7b42-4af7-b5c0-4f23971b0618&iosFakeFullscreen=true" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="720" height="360" fetchpriority="high"></iframe><script>if(!document.querySelector('script[src="https://player.pandavideo.com.br/api.v2.js"]')){let s=document.createElement('script');s.src='https://player.pandavideo.com.br/api.v2.js'; s.async=true; document.head.appendChild(s);} window.pandascripttag = window.pandascripttag || [];window.pandascripttag.push(function (){const panda_id_player = 'panda-bf20f417-7b42-4af7-b5c0-4f23971b0618';const p=new PandaPlayer(panda_id_player,{onReady(){p.loadWindowScreen({panda_id_player});}});})</script>
 
                 </div>
 
-                <img data-aos="fade-up" class="patinha grande" src="./assets/patinha.avif" alt="">
-                <img data-aos="fade-up" class="patinha pequena" src="./assets/patinha.avif" alt="">
+                <img loading="lazy" decoding="async" data-aos="fade-up" class="patinha grande" src="./assets/patinha.avif" alt="">
+                <img loading="lazy" decoding="async" data-aos="fade-up" class="patinha pequena" src="./assets/patinha.avif" alt="">
             </div>
         </div>
 
@@ -116,15 +111,15 @@
         <div class="wrapper">
             <div class="content">
                 <div class="box">
-                    <img data-aos="fade-up" class="logo" src="./assets/logo.avif" alt="">
+                    <img loading="lazy" decoding="async" data-aos="fade-up" class="logo" src="./assets/logo.avif" alt="">
                     <div class="box-two">
                         <div class="head">
-                        <img data-aos="fade-up" class="tres" src="./assets/3 PILARES.svg" alt="">
+                        <img loading="lazy" decoding="async" data-aos="fade-up" class="tres" src="./assets/3 PILARES.svg" alt="">
                         </div>
-                        <img data-aos="fade-up" class="patinha" src="./assets/patinha.avif" alt="">
+                        <img loading="lazy" decoding="async" data-aos="fade-up" class="patinha" src="./assets/patinha.avif" alt="">
                         <div class="cards">
                             <div data-aos="fade-up" class="card">
-                                <img src="./assets/pilar 1.avif" alt="">
+                                <img loading="lazy" decoding="async" src="./assets/pilar 1.avif" alt="">
 
                                 <div class="text">
                                     <h3>CONTROLE DA BOCA</h3>
@@ -133,7 +128,7 @@
                             </div>
 
                             <div data-aos="fade-up" class="card">
-                                <img src="./assets/pilar 2.avif" alt="">
+                                <img loading="lazy" decoding="async" src="./assets/pilar 2.avif" alt="">
 
                                 <div class="text">
                                     <h3>COMANDO LIMITADOR</h3>
@@ -142,7 +137,7 @@
                             </div>
 
                             <div data-aos="fade-up" class="card">
-                                <img src="./assets/pilar 3.avif" alt="">
+                                <img loading="lazy" decoding="async" src="./assets/pilar 3.avif" alt="">
 
                                 <div class="text">
                                     <h3>SIGA-ME</h3>
@@ -184,8 +179,8 @@
         <svg class="linha dois" width="526" height="220" viewBox="0 0 526 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path class="linha-path" d="M1 220.008V212.008V200.008L2.5 188.008L4 176.008L6.5 164.008L10.5 152.508L15 141.508L21.5 131.508L29 122.508L38 114.508L48 108.008L59.5 103.508L71 100.508L83 98.5078L95 96.5078L107 95.5078H119H131L142.5 98.0078L154 101.508L165.5 105.508L176 110.008L187.5 115.508L198 121.008L208 126.508L219 132.508L230 138.008L240.5 143.008L251.5 148.008L262.5 153.008L273 157.508L285 162.008L296.5 165.508L308.5 169.008L320 172.008L331.5 174.508L343.5 175.508L356 176.008H368L380 174.508L391.5 169.008L402 162.508L410.5 154.508L418.5 144.508L425 134.008L430 123.508L434.5 111.508L437.5 100.008L439 88.0078L439.5 76.5078L438 64.0078L434 52.5078L428.5 41.0078L422 31.0078L414.5 22.0078L405.5 14.0078L396 7.00781L385 2.50781L373 1.00781L361 2.50781L350 6.50781L339.5 13.5078L331 21.5078L323.5 31.0078L318 42.0078L315.5 53.5078L316 65.5078L321 76.5078L328.5 86.5078L338 94.0078L348 100.008L359 105.508L370 109.508L381.5 113.508L393 116.508L405 119.008L416.5 121.008L428 121.508H441L453 120.508L464.5 119.008L476.5 116.008L488 112.508L499 108.008L510 103.008L520.5 97.5078L525 95.0078" />
         </svg>
-                <img data-aos="fade-up" class="incluido" src="./assets/incluido.svg" alt="">
-                <img data-aos="fade-up" class="completo" src="./assets/completo.svg" alt="">
+                <img loading="lazy" decoding="async" data-aos="fade-up" class="incluido" src="./assets/incluido.svg" alt="">
+                <img loading="lazy" decoding="async" data-aos="fade-up" class="completo" src="./assets/completo.svg" alt="">
 
                 <header data-aos="fade-up">
                     <h2>Incluído</h2>
@@ -221,47 +216,47 @@ com Jairo Teixeira</p>
         <div class="wrapper">
             <div class="content">
                 <header>
-                    <img data-aos="fade-up" class="mobile" src="./assets/resolve mobile.avif" alt="">
-                    <img data-aos="fade-up" class="desktop" src="./assets/resolva.avif" alt="">
+                    <img loading="lazy" decoding="async" data-aos="fade-up" class="mobile" src="./assets/resolve mobile.avif" alt="">
+                    <img loading="lazy" decoding="async" data-aos="fade-up" class="desktop" src="./assets/resolva.avif" alt="">
                 </header>
 
                 <div class="cards">
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 1.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 1.avif" alt="">
                     </div>
 
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 2.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 2.avif" alt="">
                     </div>
 
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 3.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 3.avif" alt="">
                     </div>
 
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 4.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 4.avif" alt="">
                     </div>
 
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 5.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 5.avif" alt="">
                     </div>
 
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 6.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 6.avif" alt="">
                     </div>
 
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 7.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 7.avif" alt="">
                     </div>
 
                     <div data-aos="fade-up" class="card">
-                        <img src="./assets/card mca 8.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/card mca 8.avif" alt="">
                     </div>
                 </div>
 
                 <a href="#plano"><button class="button">QUERO MEU CACHORRO ADESTRADO</button></a>
 
-                <img data-aos="fade-up" class="cachorro" src="./assets/cachorro.avif" alt="">
+                <img loading="lazy" decoding="async" data-aos="fade-up" class="cachorro" src="./assets/cachorro.avif" alt="">
             </div>
         </div>
     </section>
@@ -276,11 +271,11 @@ método infalível aplicado por dezenas de milhares de alunos</p>
                 </header>
 
                 <div data-aos="flip-up" class="card">
-                    <img class="faixa left" src="./assets/FAIXA 40 OFF.avif" alt="">
+                    <img loading="lazy" decoding="async" class="faixa left" src="./assets/FAIXA 40 OFF.avif" alt="">
 
                     <div class="boxes">
-                        <div data-aos="fade-up" class="box">
-                            <img src="./assets/checkout.avif" alt="">
+                        <div class="box">
+                            <img loading="lazy" decoding="async" src="./assets/checkout.avif" alt="">
 
                             <div class="price">
                                 <h4>Acesse de <span>R$974</span> por:</h4>
@@ -291,7 +286,7 @@ método infalível aplicado por dezenas de milhares de alunos</p>
 
                         <a class="mobile" target="_blank" href="https://pay.meucachorroadestrado.com.br/pay/shopmca?coupon=JAIRO40"><button class="button">QUERO MEU CACHORRO ADESTRADO</button></a>
 
-                        <div data-aos="fade-up" class="box">
+                        <div class="box">
                             <h3>No curso, você terá acesso:</h3>
                             <p>• 1 ano de acesso ao curso</p>
                             <p>• Mentorias mensais em grupo</p>
@@ -320,23 +315,23 @@ método infalível aplicado por dezenas de milhares de alunos</p>
                 <div data-aos="fade-up" class="swiper mySwiper4">
                     <div class="cards swiper-wrapper">
                         <div class="card swiper-slide">
-                            <img src="./assets/depoimentos/depo 2.avif" alt="">
+                            <img loading="lazy" decoding="async" src="./assets/depoimentos/depo 2.avif" alt="">
                         </div>
 
                         <div class="card swiper-slide">
-                            <img src="./assets/depoimentos/depo 1.avif" alt="">
+                            <img loading="lazy" decoding="async" src="./assets/depoimentos/depo 1.avif" alt="">
                         </div>
 
                         <div class="card swiper-slide">
-                            <img src="./assets/depoimentos/depo 3.avif" alt="">
+                            <img loading="lazy" decoding="async" src="./assets/depoimentos/depo 3.avif" alt="">
                         </div>
 
                         <div class="card swiper-slide">
-                            <img src="./assets/depoimentos/depo 4.avif" alt="">
+                            <img loading="lazy" decoding="async" src="./assets/depoimentos/depo 4.avif" alt="">
                         </div>
 
                         <div class="card swiper-slide">
-                            <img src="./assets/depoimentos/depo 5.avif" alt="">
+                            <img loading="lazy" decoding="async" src="./assets/depoimentos/depo 5.avif" alt="">
                         </div>
                     </div>
 
@@ -352,7 +347,7 @@ método infalível aplicado por dezenas de milhares de alunos</p>
         <div class="wrapper">
             <div class="content">
                 <div data-aos="flip-up" class="card">
-                    <img src="./assets/head sobre.avif" alt="">
+                    <img loading="lazy" decoding="async" src="./assets/head sobre.avif" alt="">
 
                     <p>Conhecido como um dos maiores adestradores do Brasil, 
                     <span>dediquei minha vida ao estudo do comportamento canino</span>, 
@@ -435,7 +430,7 @@ método infalível aplicado por dezenas de milhares de alunos</p>
                 </div>
 
                 <div data-aos="fade-up" class="image">
-                    <img src="./assets/garantia.avif" alt="">
+                    <img loading="lazy" decoding="async" src="./assets/garantia.avif" alt="">
                 </div>
             </div>
         </div>
@@ -449,17 +444,17 @@ método infalível aplicado por dezenas de milhares de alunos</p>
                 <a target="_blank" href="https://instagram.com/studioaltonivel">
                     <p class="author">
                         Desenvolvido por 
-                        <img src="./assets/logo altonivel.avif" alt="">
+                        <img loading="lazy" decoding="async" src="./assets/logo altonivel.avif" alt="">
                     </p>
                 </a>
             </div>
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    <script>
+    <script defer>
     window.addEventListener("load", () => {
     if (!window.gsap || !window.ScrollTrigger) return;
 
@@ -545,41 +540,38 @@ método infalível aplicado por dezenas de milhares de alunos</p>
     });
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init(
-            {
-                duration: 1500,
-            }
-        );
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer>
+  window.addEventListener("load", () => {
+    if (!window.AOS) return;
+    AOS.init({ duration: 1500 });
+  });
     </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./script.js?v=4"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="./script.js?v=4"></script>
 
-    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-    <script>
-        // Initialize Lenis with options
+    <script defer src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script defer>
+    window.addEventListener("load", () => {
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (isMobile) return;
+
         const lenis = new Lenis({
-            smooth: true, // Ativa o scroll suave
-            duration: 1.1, // Define a duração do scroll (maior valor deixa mais lento)
-            easing: (t) => 1 - Math.pow(1 - t, 4), // Função de easing para suavidade
+        smooth: true,
+        duration: 1.1,
+        easing: (t) => 1 - Math.pow(1 - t, 4),
         });
 
-        // Listen for the scroll event and log the event data
-        lenis.on("scroll", (e) => {
-            console.log(e);
-        });
-
-        // Use requestAnimationFrame to continuously update the scroll
         function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
+        lenis.raf(time);
         requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    });
     </script>
+
 </body>
 
 </html>
