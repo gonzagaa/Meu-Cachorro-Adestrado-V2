@@ -167,11 +167,11 @@
     display: inherit;
   }
 
-  header#home img.bg.desktop {
+  header#home img.bg {
     display: inherit;
     height: 100%;
     object-fit: cover;
-    mask-image: linear-gradient(to bottom, #000 70%, transparent);
+    mask-image: linear-gradient(to bottom, #000 20%, transparent);
   }
 
   header#home img.bg.mobile {
